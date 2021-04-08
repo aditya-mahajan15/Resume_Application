@@ -1,11 +1,17 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent[100],
-      appBar: AppBar(title: Text("My Profile"),centerTitle: true,leading: null,),
+      backgroundColor: Colors.lightBlueAccent,
+      appBar: AppBar(
+        title: Text("My Profile"),
+        centerTitle: true,
+        leading: null,
+      ),
       body: ListView(
         children: <Widget>[
           Column(
@@ -17,15 +23,66 @@ class ProfileScreen extends StatelessWidget {
                   radius: 100,
                 ),
               ),
-              SizedBox(height: 10,),
-              Text("Aditya Mahajan",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),),
-              Text("Flutter Developer",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,color: Colors.white),),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Aditya Mahajan",
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              Text(
+                "Flutter Developer",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white),
+              ),
+              SizedBox(
+                height: 30,
+              ),
               Container(
-                color: Colors.white,
-                margin: EdgeInsets.all(10),
-                padding: EdgeInsets.all(120),
-                child: Column(),
+                margin: EdgeInsets.all(20),
+                color: Colors.blueAccent,
+                child: Column(
+                  children: [
+                    Center(
+                      child: Text(
+                        'I\'m 21 Years Old.',
+                        style: kText,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Center(
+                      child: Text(
+                        'I\'m PreFinal Year Student.',
+                        style: kText,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Center(
+                      child: Text(
+                        'Studying at VIT.',
+                        style: kText,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Center(
+                      child: Text(
+                        'I\'m CSE Major.',
+                        style: kText,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -34,3 +91,10 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 }
+
+var kText = TextStyle(
+    fontSize: 25.0,
+    fontWeight: FontWeight.bold,
+    fontStyle: FontStyle.italic,
+    color: Colors.white,
+    fontFamily: 'Lobster');
