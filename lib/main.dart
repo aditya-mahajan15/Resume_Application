@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sample/screens/contactme.dart';
+import 'package:sample/screens/education.dart';
+import 'package:sample/screens/hobbies.dart';
 import 'package:sample/screens/profile.dart';
+import 'package:sample/shared/drawer.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -15,60 +19,7 @@ class MyApp extends StatelessWidget {
         title: Text("My Resume"),
         centerTitle: true,
       ),
-      drawer: Drawer(
-        child: Container(
-          color: Colors.blueAccent[100],
-          child: SafeArea(
-              child: Column(
-            children: <Widget>[
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ProfileScreen()));
-                },
-                child: ListTile(
-                  leading: Icon(Icons.person, size: 45, color: Colors.white),
-                  title: Text(
-                    'My Profile',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                leading: Icon(Icons.book, size: 45, color: Colors.white),
-                title: Text(
-                  'Education',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                leading: Icon(Icons.gamepad, size: 45, color: Colors.white),
-                title: Text(
-                  'Hobbies',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              ListTile(
-                leading:
-                    Icon(Icons.contact_phone, size: 45, color: Colors.white),
-                title: Text(
-                  'Contact Me',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-              ),
-            ],
-          )),
-        ),
-      ),
+      drawer: MainDrawer(),
       body: ListView(
         children: <Widget>[
           Row(
@@ -98,7 +49,7 @@ class MyApp extends StatelessWidget {
                 width: 30,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => EducationScreen()));},
                 child: Card(
                   elevation: 5.0,
                   margin: EdgeInsets.only(top: 20, left: 30),
@@ -123,7 +74,7 @@ class MyApp extends StatelessWidget {
           Row(
             children: <Widget>[
               GestureDetector(
-                onTap: () {},
+                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => HobbiesScreen()));},
                 child: Card(
                   elevation: 5.0,
                   margin: EdgeInsets.only(top: 20, left: 30),
@@ -144,7 +95,7 @@ class MyApp extends StatelessWidget {
                 width: 30,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => ContactMeScreen()));},
                 child: Card(
                   elevation: 5.0,
                   margin: EdgeInsets.only(top: 20, left: 30),

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:sample/shared/drawer.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -12,6 +13,7 @@ class ProfileScreen extends StatelessWidget {
         centerTitle: true,
         leading: null,
       ),
+      drawer: MainDrawer(),
       body: ListView(
         children: <Widget>[
           Column(
