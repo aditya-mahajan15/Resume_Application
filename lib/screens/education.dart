@@ -12,6 +12,34 @@ class EducationScreen extends StatelessWidget {
         leading: null,
       ),
       drawer: MainDrawer(),
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            SizedBox(height: 30,width: 30,),
+            ListTile(
+              horizontalTitleGap: 50,
+              leading: Icon(Icons.school,size: 60,color: Colors.black,),
+              title: Column(
+                children: [
+                  Text('Jodhamal Public School',style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.white,
+                      fontFamily: 'Lobster'),),
+                  SizedBox(height: 6,),
+                  Text('10 - 10.0 CGPA',style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.white,
+                      fontFamily: 'Lobster'),),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
