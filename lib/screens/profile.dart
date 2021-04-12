@@ -62,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     Center(
                       child: Text(
-                        'I\'m PreFinal Year Student.',
+                        'I\'m Third Year Student.',
                         style: kText,
                       ),
                     ),
@@ -71,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     Center(
                       child: Text(
-                        'Studying at VIT.',
+                        'Studying at VIT,Pune.',
                         style: kText,
                       ),
                     ),
@@ -80,7 +80,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     Center(
                       child: Text(
-                        'I\'m CSE Major.',
+                        'CE is my major.',
                         style: kText,
                       ),
                     ),

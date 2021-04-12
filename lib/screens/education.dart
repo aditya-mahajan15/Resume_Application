@@ -59,6 +59,28 @@ class EducationScreen extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: 40,),
+            ListTile(
+              horizontalTitleGap: 50,
+              leading: Icon(Icons.school_outlined,size: 60,color: Colors.black,),
+              title: Column(
+                children: [
+                  Text('Vishwakarma Institute of Technology,Pune',style: TextStyle(
+                      fontSize: 23.0,
+                      fontWeight: FontWeight.bold,
+                      // fontStyle: FontStyle.italic,
+                      color: Colors.white,
+                      fontFamily: 'Lobster'),),
+                  SizedBox(height: 6,),
+                  Text('CE - 8.57 GPA',style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.blueAccent,
+                      fontFamily: 'Lobster'),),
+                ],
+              ),
+            ),
           ],
         ),
       ),
